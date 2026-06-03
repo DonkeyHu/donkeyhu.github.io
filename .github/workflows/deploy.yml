@@ -18,6 +18,8 @@ jobs:
 
       - name: Install, build, and upload your site
         uses: withastro/action@v3 # 官方构建 Action，会自动侦测包管理器（npm/pnpm/yarn）并执行打包
+        with:
+          node-version: 22          # 确保这一行存在且不低于 22
 
   deploy:
     needs: build
